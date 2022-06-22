@@ -3,7 +3,7 @@ on: [push]
 
 permissions:
       id-token: read-all
-      contents: read-all
+      contents: read
       
 jobs: 
   build-and-deploy:
