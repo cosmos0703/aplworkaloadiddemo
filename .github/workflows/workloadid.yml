@@ -20,6 +20,6 @@ jobs:
   
     - name: 'Run Azure CLI commands'
       run: |
-          az account show |grep user
+          az account show |grep name
           az group list
           pwd
