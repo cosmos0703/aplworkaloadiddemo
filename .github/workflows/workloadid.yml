@@ -2,7 +2,7 @@ name: Run Azure Login with OpenID Connect
 on: [push]
 
 permissions:
-      id-token: read
+      id-token: write
       contents: read
       
 jobs: 
@@ -20,6 +20,6 @@ jobs:
   
     - name: 'Run Azure CLI commands'
       run: |
-          az account show
+          az account show |grep user
           az group list
           pwd
