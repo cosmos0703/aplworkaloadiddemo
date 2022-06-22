@@ -12,7 +12,7 @@ jobs:
     - name: 'Az CLI login'
       uses: azure/login@v1
       with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-id:  e5c28045-1365-42c6-9e67-1f84efc97081
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           # enable-AzPSSession: true
@@ -20,6 +20,6 @@ jobs:
   
     - name: 'Run Azure CLI commands'
       run: |
-          az account show --query user.name
+          az account show
           az group list
           pwd
